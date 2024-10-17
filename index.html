@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduccion a Js</title>
+    
+</head>
+<body>
+    <h1>Introduccion a Java Script</h1>
+    <script>
+        alert("Hola Mundo")
+        document.write("Hola Mundo")
+        console.log("Hola Mundo")
+        //Variable en Js
+        var nombre= "Erick"
+        alert (nombre);
+        var edad=16;
+        console.log("El nombre del estudiante es:" + nombre + " y tiene " + edad + " años ")
+        var apeliido= prompt("Ingrese el apellido del estudiante:");
+        
+        //tipos de variables
+        //num
+        var edad= 19;
+        
+        //string
+        var direccion= "Comite del Pueblo"
+        
+        //arreglos
+        var amigos=["Luis", "Carlos", "Cecilia", "Norma"]
+        
+        //boleano
+        var bolean =true;
+        
+        //undefined
+        var ejemplo=undefined;
+        
+        //null
+        var numero2=10;
+        var numero2=null;
+        
+        //nan
+        var texto2="hola como estas";
+        console.log(texto2);
+        
+        //arreglo
+        var amigos2=["Carlos", "Martin", "Jorge"];
+        console.log(amigos2 [0] );
+        
+        //editar dato del arreglo
+        amigos2[1]="Pablo"
+        console.log(amigos2)
+        
+        //obtener el tamaño del arreglo
+        console.log("Tienes" + amigos2.length + " Amigos ")
+        
+        //edit dato del array al final
+        amigos2[amigos2.length]="Diego";
+        console.log(amigos2);
+        
+        //añadir varios elementos
+        amigos2.push("Lenin", "Alexis", "Daniel");
+        console.log(amigos2);
+        
+        //eliminar el ultimo dato
+        amigos2.pop();
+        console.log(amigos2);
+
+        //concatenar arrays
+        var amigos3=amigos.concat(amigos2);
+        console.log(amigos3);
+
+        //operaciones matematicas
+        //suma +
+        //resta -
+        //multiplicacion *
+        //division /
+        //modulo %
+        var a=5;
+        var b=2;
+        var suma= a + b
+        console.log("La suma de a + b es igual a:" + suma)
+
+        //math
+        var c=9;
+        var d=Math.sqrt(c);
+        console.log("La raiz cuadrada de 9 es:" +d);
+
+        //condicional
+        //operadores logicos
+        //& and
+        //|| or
+        if(d>5){
+            console.log("El valor no es exacto")
+        }
+        else{
+            console.log("El valor es exacto")
+        }
+
+        //raices de una ecuacion de segundo grado y el resultado en consola
+        function calcularRaiz (a, b, c) {
+            
+            //discriminante
+            var discr=b*b-4*a*c;
+
+            //valor del discriminante
+            if(discr>0){
+                var raiz_1 =(-b+ Math.sqrt(discr))/(2*a);
+                var raiz_2 =(-b- Math.sqrt(discr))/(2*a);
+                console.log(" raiz real, distinta "+ raiz_1 + " raiz 1 y 2 " + raiz_2);
+            }
+            else if (discr===0){
+                var r_unica= -b / (2*a);
+                console.log(" raiz doble "+ r_unica);
+            }
+            else{
+                var real= (-b/(2*a));
+                var imaginar= (Math.sqrt(-discr)/(2*a));
+                console.log(" raiz compleja " + real + " +  - " + imaginar + " ima ")
+            }
+        }
+        
+        //ingresar valores a b c
+        var a= parseFloat(prompt("Ingrese el valor de a"));
+        var b= parseFloat(prompt("Ingrese el valor de b"));
+        var c= parseFloat(prompt("Ingrese el valor de c"));
+
+        //validar si a es diferente a 0
+        if(a!==0){
+            calcularRaiz(a, b, c);
+        }
+        else{
+            console.log("valor de a no puede ser 0")
+        }
+    </script>
+</body>
+</html>
